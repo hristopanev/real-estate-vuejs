@@ -43,21 +43,21 @@
 
 <script>
 /* eslint-disable */
-import { mapActions, mapGetters } from  'vuex';
+import { mapActions, mapGetters } from "vuex";
 
 export default {
-     computed: {
-      ...mapGetters({
-        ads: 'getAllAds'
-      })
-    },
-    methods: {
-      ...mapActions(['getAll'])
-    },
-    created() {
-        this.getAll();
-    }
-}
+  computed: {
+    ...mapGetters({
+      ads: "getAllAds"
+    })
+  },
+  methods: {
+    ...mapActions(["getAll"])
+  },
+  created() {
+    this.getAll();
+  }
+};
 </script>
 
 <style scoped></style>

@@ -9,10 +9,8 @@
       <div class="col-md-4"></div>
       <div class="col-md-4 pb-5">
         <div class="card text-white bg-danger">
-          <div class="card-body">
-            <blockquote class="card-blockquote">
-              <img :src="ad.image" width="310" />
-            </blockquote>
+          <div class="card">
+              <img :src="ad.image" />
           </div>
         </div>
       </div>

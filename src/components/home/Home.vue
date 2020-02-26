@@ -57,7 +57,44 @@
         </form>
       </div>
     </div>
-    <div v-if="isAuthenticated"></div>
+    <div v-if="isAuthenticated">
+      <h1 class="font-italic text-center pt-5">
+        <p style="-webkit-text-stroke: thin;">Top Offerts</p>
+        <hr />
+      </h1>
+      <div class="d-flex p-5 text-center row justify-content-around">
+        <div v-for="ad in ads.slice(0, 3)" :key="ad._id">
+          <div class="card" style="width: 18rem;">
+            <img
+              class="card-img-top"
+              :src="ad.image"
+              alt="da"
+              width="300"
+              height="200"
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{ ad.city }}</h5>
+              <p class="card-text"><strong>Rooms:</strong> {{ ad.rooms }}</p>
+              <p>
+                {{ ad.description.slice(0, 60) }}
+              </p>
+              <p><strong>Price:</strong> {{ ad.price }}€</p>
+              <form id="add-product-form" class="form w-15 mx-auto">
+                <div class="button-holder d-block justify-content-center">
+                  <router-link
+                    :to="{ name: 'adDetails', params: { id: ad._id } }"
+                    tag="button"
+                    class="btn btn-danger 
+                    text-white"
+                    >Details
+                  </router-link>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="d-flex p-5 text-center row justify-content-around" v-else>
       <div class="card col-12 col-md-3" style="width: 18rem;">
         <img class="card-img-top" src="./image/image1.jpg" alt="da" />
@@ -113,20 +150,33 @@
 
 <script>
 /* eslint-disable */
-import { mapActions, mapGetters } from  'vuex';
-
+import { mapActions, mapGetters } from "vuex";
+/**   
+  message() {
+    alert("To access the whole content the users need to register!");
+  },
+*/
 export default {
   data() {
     return {
       city: ""
-    }
+    };
+  },
+  computed: {
+    ...mapGetters({
+      ads: "getAllAds"
+    })
   },
   methods: {
+    ...mapActions(["getAll"]),
     message() {
-      alert('To access the whole content the users need to register!');
-    }
+      alert("To access the whole content the users need to register!");
+  },
+  },
+  created() {
+    this.getAll();
   }
-}
+};
 </script>
 
 <style scoped>
