@@ -24,19 +24,20 @@
         <p>{{ ad.city }}, {{ ad.street }}, {{ ad.zip }}</p>
         <hr />
 
-        <h3>Description:</h3>
+        <h3>Details:</h3>
+        <p><strong>Rooms:</strong> {{ ad.rooms }}</p>
         <p>
           {{ ad.description }}
         </p>
         <hr />
 
         <h3>Price:</h3>
-        <p>Price: {{ ad.price }} $</p>
+        <p><strong>Price:</strong> {{ ad.price }}€</p>
         <hr />
 
         <h3>Contact:</h3>
-        <p>Telephone: {{ ad.telephone }}</p>
-        <p>Email: {{ ad.email }}</p>
+        <p><strong>Telephone:</strong> {{ ad.telephone }}</p>
+        <p><strong>Email:</strong> {{ ad.email }}</p>
         <hr />
       </div>
     </div>
