@@ -1,5 +1,3 @@
-/* eslint-disable prettier/prettier */
-/* eslint-disable prettier/prettier */
 <template>
   <div class="container p-5">
     <h1>Login</h1>

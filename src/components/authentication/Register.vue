@@ -14,6 +14,9 @@
           required
           name="name"
         />
+        <p v-if="$v.username.$error" class="alert alert-danger">
+          Username is not valid!
+        </p>
       </div>
       <div class="form-group">
         <label for="email">Email</label>
@@ -22,10 +25,11 @@
           v-model="$v.email.$model"
           class="form-control"
           id="email"
-          required
-          email
           name="email"
         />
+        <p v-if="$v.email.$error" class="alert alert-danger">
+          Email is not valid!
+        </p>
       </div>
       <div class="form-group">
         <label for="password">Password</label>
@@ -34,8 +38,10 @@
           v-model="$v.password.$model"
           class="form-control"
           id="password"
-          required
         />
+        <p v-if="$v.password.$error" class="alert alert-danger">
+          Password is not valid!
+        </p>
       </div>
       <dir class="text-center">
         <button
@@ -60,9 +66,9 @@ import { required, minLength , maxLength, email } from 'vuelidate/lib/validators
 export default {
   data() {
     return {
-      username: 'Ivan',
-      password: 'dada',
-      email: 'ivan@ivan.bg'
+      username: '',
+      password: '',
+      email: ''
     };
   },
   mixins: [authenticate],

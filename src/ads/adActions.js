@@ -59,15 +59,14 @@ export default {
         }).then(res => res.json())
         .then(dataRes => context.commit(createAd(dataRes)));
     },
-    //appSecret
     deleteAd(context, ad) {
-        return fetch(`https://baas.kinvey.com/appdata/${config.appSecret}/ads/${ad._id}`, {
+        return fetch(`https://baas.kinvey.com/appdata/${config.appKey}/ads/${ad._id}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Kinvey ${getAuthToken()}`
-            }.then(console.log(ad._id))
-        });
+            }
+        }).then(res => res.json())
     },
 
 }
