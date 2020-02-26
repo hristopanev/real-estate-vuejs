@@ -10,7 +10,7 @@
       <div class="col-md-4 pb-5">
         <div class="card text-white bg-danger">
           <div class="card">
-              <img :src="ad.image" />
+            <img :src="ad.image" />
           </div>
         </div>
       </div>
@@ -51,16 +51,15 @@
 </template>
 
 <script>
-/* eslint-disable */
-import { mapGetters } from 'vuex'
+import { mapGetters } from "vuex";
 
 export default {
-    computed: {
-        ...mapGetters(['getOneAd']),
-        ad() {
-            return this.getOneAd(this.$route.params.id)
-        }
+  computed: {
+    ...mapGetters(["getOneAd"]),
+    ad() {
+      return this.getOneAd(this.$route.params.id);
     }
+  }
 };
 </script>
 
