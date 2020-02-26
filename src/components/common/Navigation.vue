@@ -41,9 +41,6 @@
           </template>
           <template v-else>
             <li class="nav-item">
-              <a class="nav-link" href="/ad/all">All Ads</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="/login">Login</a>
             </li>
             <li class="nav-item">

@@ -6,7 +6,7 @@
           <h1 class="p-3">Welcome to real-estate</h1>
         </div>
       </div>
-      <div class="container p-4">
+      <div class="container p-4" v-if="isAuthenticated">
         <div class="text-white text-center p-2">
           <h1 class="p-5 h2">Find a property</h1>
           <p>Search for a property using the form below:</p>
@@ -23,7 +23,7 @@
             aria-label="Search"
             id="inputSearch"
           />
-          <div class="text-center">
+          <div class="text-center pt-3">
             <router-link
               :to="{ name: 'search', params: { city: city } }"
               tag="button"
@@ -34,6 +34,79 @@
           </div>
         </form>
       </div>
+      <div class="container p-4" v-else>
+        <div class="text-white text-center p-2">
+          <h1 class="p-5 h2">Find a property</h1>
+          <p>Search for a property using the form below:</p>
+        </div>
+        <form>
+          <input
+            required
+            minlength="2"
+            v-model="city"
+            name="query"
+            class="form-control input-lg"
+            type="text"
+            placeholder="Search"
+            aria-label="Search"
+            id="inputSearch"
+          />
+          <div class="text-center pt-3">
+            <a @click="message" class="btn btn-danger text-white">Search</a>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div v-if="isAuthenticated"></div>
+    <div class="d-flex p-5 text-center row justify-content-around" v-else>
+      <div class="card col-12 col-md-3" style="width: 18rem;">
+        <img class="card-img-top" src="./image/image1.jpg" alt="da" />
+        <div class="card-body">
+          <h5 class="card-title">Sofia</h5>
+          <p class="card-text"><strong>Rooms:</strong> 5</p>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+          </p>
+          <p><strong>Price:</strong> 50000€</p>
+          <a @click="message" class="btn btn-danger text-white">Details</a>
+        </div>
+      </div>
+      <div class="card col-12 col-md-3" style="width: 18rem;">
+        <img
+          class="card-img-top"
+          src="./image/image2.jpg"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Varna</h5>
+          <p class="card-text"><strong>Rooms:</strong> 4</p>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+          </p>
+          <p><strong>Price:</strong> 40000€</p>
+          <a @click="message" class="btn btn-danger text-white">Details</a>
+        </div>
+      </div>
+      <div class="card col-12 col-md-3" style="width: 18rem;">
+        <img
+          class="card-img-top"
+          src="./image/image3.jpg"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Ruse</h5>
+          <p class="card-text"><strong>Rooms:</strong> 7</p>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+          </p>
+          <p><strong>Price:</strong> 30000€</p>
+          <a @click="message" class="btn btn-danger text-white">Details</a>
+        </div>
+        <div class="col-12 col-md-1"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -43,11 +116,16 @@
 import { mapActions, mapGetters } from  'vuex';
 
 export default {
-    data() {
+  data() {
     return {
       city: ""
-    };
-}
+    }
+  },
+  methods: {
+    message() {
+      alert('To access the whole content the users need to register!');
+    }
+  }
 }
 </script>
 
