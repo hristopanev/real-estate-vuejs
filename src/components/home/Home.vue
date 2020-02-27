@@ -52,7 +52,14 @@
             id="inputSearch"
           />
           <div class="text-center pt-3">
-            <a @click="message" class="btn btn-danger text-white">Search</a>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-toggle="modal"
+              data-target="#exampleModalCenter"
+            >
+              Search
+            </button>
           </div>
         </form>
       </div>
@@ -118,7 +125,14 @@
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             </p>
             <p><strong>Price:</strong> 50000€</p>
-            <a @click="message" class="btn btn-danger text-white">Details</a>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-toggle="modal"
+              data-target="#exampleModalCenter"
+            >
+              Details
+            </button>
           </div>
         </div>
         <div class="card col-12 col-md-3" style="width: 18rem;">
@@ -135,7 +149,14 @@
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             </p>
             <p><strong>Price:</strong> 40000€</p>
-            <a @click="message" class="btn btn-danger text-white">Details</a>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-toggle="modal"
+              data-target="#exampleModalCenter"
+            >
+              Details
+            </button>
           </div>
         </div>
         <div class="card col-12 col-md-3" style="width: 18rem;">
@@ -152,7 +173,56 @@
               nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             </p>
             <p><strong>Price:</strong> 30000€</p>
-            <a @click="message" class="btn btn-danger text-white">Details</a>
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-toggle="modal"
+              data-target="#exampleModalCenter"
+            >
+              Details
+            </button>
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModalCenter"
+              tabindex="-1"
+              role="dialog"
+              aria-labelledby="exampleModalCenterTitle"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">
+                      Info
+                    </h5>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    To access the whole content the users need to register!
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <a href="/register" type="button" class="btn btn-danger">
+                      Register
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col-12 col-md-1"></div>
         </div>
