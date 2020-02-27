@@ -40,7 +40,7 @@
                 </router-link>
                 <p></p>
                 <button
-                  class="btn btn-primary text-white"
+                  class="btn btn-secondary text-white"
                   @click="deleteAd(ad)"
                 >
                   Delete
