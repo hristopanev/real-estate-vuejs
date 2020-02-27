@@ -71,7 +71,7 @@
       </h1>
       <div class="d-flex p-5 text-center row justify-content-around">
         <div v-for="ad in ads.slice(0, 3)" :key="ad._id">
-          <div class="card" style="width: 18rem;">
+          <div class="card p-2" style="width: 18rem;">
             <img
               class="card-img-top"
               :src="ad.image"
