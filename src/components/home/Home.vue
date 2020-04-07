@@ -3,7 +3,7 @@
     <div class="index-main">
       <div class="row">
         <div class="content welcome text-center">
-          <h1 class="p-3">Welcome to real-estate</h1>
+          <h1 class="p-3">Welcome to real-estate "R-S"</h1>
         </div>
       </div>
       <div class="container p-4" v-if="isAuthenticated">
