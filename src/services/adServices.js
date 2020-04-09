@@ -6,6 +6,7 @@ import config from '../config/config'
 // eslint-disable-next-line no-unused-vars
 const getAuthToken= () => localStorage.getItem('authtoken');
 
+
 export const adService = {
     data() {
         return {
