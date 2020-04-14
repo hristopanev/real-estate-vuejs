@@ -41,10 +41,10 @@
           </template>
           <template v-else>
             <li class="nav-item">
-              <a class="nav-link" href="/login">Login</a>
+              <a class="nav-link" href="/user/login">Login</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/register">Register</a>
+              <a class="nav-link" href="/user/register">Register</a>
             </li>
           </template>
         </ul>
