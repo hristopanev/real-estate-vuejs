@@ -2,11 +2,9 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 
 import Home from "@/components/home/Home";
-
 import Register from "@/components/authentication/Register";
 import Login from "@/components/authentication/Login";
 import AdDetails from "@/components/ad/AdDetails";
-
 import AdCreate from "@/components/ad/AdCreate";
 import AdsAll from "@/components/ad/AdsAll";
 import Search from "@/components/ad/Search";
