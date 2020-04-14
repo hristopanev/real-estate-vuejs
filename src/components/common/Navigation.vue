@@ -31,7 +31,7 @@
                 >Store</a
               >
               <div class="dropdown-menu" aria-labelledby="dropdown01">
-                <a class="dropdown-item" href="/ad/profile">My Ad</a>
+                <a class="dropdown-item" href="/user/profile">My Ad</a>
                 <a class="dropdown-item" href="/ad/create">Create Ad</a>
               </div>
             </li>

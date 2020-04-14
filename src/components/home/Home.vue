@@ -216,7 +216,11 @@
                     >
                       Close
                     </button>
-                    <a href="/register" type="button" class="btn btn-danger">
+                    <a
+                      href="/user/register"
+                      type="button"
+                      class="btn btn-danger"
+                    >
                       Register
                     </a>
                   </div>
