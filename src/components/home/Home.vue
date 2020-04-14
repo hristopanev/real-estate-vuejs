@@ -209,19 +209,22 @@
                     To access the whole content the users need to register!
                   </div>
                   <div class="modal-footer">
-                    <button
+                    <a
                       type="button"
                       class="btn btn-secondary"
                       data-dismiss="modal"
                     >
                       Close
-                    </button>
+                    </a>
                     <a
                       href="/user/register"
                       type="button"
                       class="btn btn-danger"
                     >
                       Register
+                    </a>
+                    <a href="/user/login" type="button" class="btn btn-danger">
+                      Login
                     </a>
                   </div>
                 </div>
