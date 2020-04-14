@@ -11,6 +11,8 @@ import AdsAll from "@/components/ad/AdsAll";
 import Search from "@/components/ad/Search";
 import Profile from "@/components/ad/Profile";
 
+const username = localStorage.getItem("username");
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -32,27 +34,51 @@ const routes = [
   {
     path: "/ad/create",
     name: "adCreate",
-    component: AdCreate
+    component: AdCreate,
+    beforeEnter: (to, from, next) => {
+      const redirectUrl = username ? undefined : "/user/login";
+      next(redirectUrl);
+    }
   },
   {
     path: "/ad/all",
     name: "adsAll",
-    component: AdsAll
+    component: AdsAll,
+    beforeEnter: (to, from, next) => {
+      const redirectUrl = username ? undefined : "/user/login";
+      next(redirectUrl);
+    }
   },
   {
     path: "/ad/profile",
     name: "profile",
-    component: Profile
+    component: Profile,
+    beforeEnter: (to, from, next) => {
+      const redirectUrl = username ? undefined : "/user/login";
+      next(redirectUrl);
+    }
   },
   {
     path: "/ad/search/:city",
     name: "search",
-    component: Search
+    component: Search,
+    beforeEnter: (to, from, next) => {
+      const redirectUrl = username ? undefined : "/user/login";
+      next(redirectUrl);
+    }
   },
   {
     path: "/ad/:id",
     name: "adDetails",
-    component: AdDetails
+    component: AdDetails,
+    beforeEnter: (to, from, next) => {
+      const redirectUrl = username ? undefined : "/user/login";
+      next(redirectUrl);
+    }
+  },
+  {
+    path: "*",
+    redirect: "/"
   }
 ];
 
