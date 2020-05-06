@@ -1,4 +1,4 @@
 export default {
-  appKey: "kid_S1OWAc4vU",
-  appSecret: "4cf0043b22a9435182308b2d19105ba9"
+  appKey: "kid_rkM0GHl5L",
+  appSecret: "c3a694e08dd443d0b2e22e173c09ee73"
 };
